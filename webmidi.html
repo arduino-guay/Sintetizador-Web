@@ -43,14 +43,14 @@
                 });
             }
 
-            const mySynth = WebMidi.inputs[0];
+            const mySynth = WebMidi.inputs[1];
             // const mySynth = WebMidi.getInputByName("TYPE NAME HERE!")
 
-            mySynth.channels[2].addListener("noteon", e => {
+            mySynth.channels[1].addListener("noteon", e => {
                 console.log(e.note);
                 notaON(e.note.number, e.note.rawAttack);
             });
-            mySynth.channels[2].addListener("noteoff", e => {
+            mySynth.channels[1].addListener("noteoff", e => {
                 console.log(e.note);
                 notaOFF(e.note.number);
             });
