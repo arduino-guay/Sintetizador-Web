@@ -65,14 +65,14 @@
 
         function cargar() {
             MIDI.loadPlugin({
-                soundfontUrl: "https://gleitz.github.io/midi-js-soundfonts/MusyngKite/",
+                soundfontUrl: "https://gleitz.github.io/midi-js-soundfonts/FatBoy/",
                 instrument: "acoustic_grand_piano",
                 instruments: ['church_organ', 'acoustic_guitar_nylon'],
                 onprogress: function (state, progress) {
                     console.log(state, progress);
                 },
                 onsuccess: function () {
-                    MIDI.programChange(0, 24);
+                    //MIDI.programChange(0, 24);
                     MIDI.setVolume(0, 127);
                 }
             });
